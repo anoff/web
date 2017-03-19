@@ -1,12 +1,12 @@
 
-title: My Resume
+title: Andreas Offenhaeuser
 url: 'http://anoff.io'
 baseurl: '/anoff.github.io' #change it according to your repository name
 
 
 # Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
 #style: styles-2
-#style: styles-3
+style: styles-3
 #style: styles-4
 #style: styles-5
 #style: styles-6
@@ -14,7 +14,7 @@ baseurl: '/anoff.github.io' #change it according to your repository name
 
 #Profile information
 name: Andreas Offenhaeuser
-tagline: Full Stack Developer
+tagline: Cloud solution architect
 pic: iceicesquare.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
