@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.2 (3/5/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modified 2017 by:
+% Andreas Offenhaeuser (http://anoff.io)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\begin{document}
+
+\header{andreas}{of\/fenhaeuser}{cloud solution architect} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{\color{red}contact}
+Stuttgart, Germany
+\href{mailto:offenhaeuser@gmail.com}{offenhaeuser@gmail.com}
+\graytitle{web}{\href{http://www.anoff.io}{anoff.io}}
+\graytitle{github}{\href{http://www.github.com/anoff}{gh/anoff}}
+\graytitle{twitter}{\href{http://twitter.com/an0xff}{@an0xff}}
+\section{\color{purple}languages}
+\graytitle{native}{german}
+\graytitle{professional}{english}
+\graytitle{beginner}{japenese, french}
+\section{\color{green}programming}
+{\color{red} $\varheartsuit$} nodeJS, JavaScript
+Python, Matlab
+bash, C, VBA
+\section{\color{blue}craftsmanship}
+software design
+system understanding
+agile methods
+continuous deployment
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\color{blue}education}
+
+\begin{entrylist}
+
+\entry
+{2016}
+{Deep Learning {\normalfont Foundation Nanodegree}}
+{Udacity}
+
+\entry
+{2007--2010}
+{Bachelor {\normalfont of Engineering}, 1.3}
+{Hochschule Heilbronn, DE}
+{Specialization in Control Systems Engineering}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\color{orange}experience}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2016--}
+{Solution Architect}
+{Robert Bosch GmbH, Stuttgart DE}
+{Responsible for backend architecture of connected vehicle services. This includes designing microservices according to domain driven principles as well as implementing features in our SCRUM team.
+
+\graytitle{aquired skills}{microservice architecture, nodeJS, OSS compliance, agile software development}
+}
+\end{entrylist}
+\begin{entrylist}
+\entry
+{2014--2016}
+{Backend developer connected vehicle}
+{Robert Bosch GmbH, Stuttgart DE}
+{Starting 2014 I was responsible for designing and developing a prototype system for a connected vehicle. It was a fullstack job where I was resonsible to manage a team of up to five to set up servers, develop backend \& frontend as well as the vehicle communication. In 2015 the project left prototype state and a larger team was built up to develop the system with a more mature state. I was involved in selecting the team members and defining the development processes.
+
+\graytitle{aquired skills}{nodeJS, AngularJS, Docker, project management}
+}
+\end{entrylist}
+\begin{entrylist}
+\entry
+{2012--2014}
+{Function developer for driver monitoring}
+{Robert Bosch GmbH, Stuttgart DE}
+{Following my experiences as a test manager I switched sides and started developing algorithms for driver monitoring. This involved handling of larger data sets within Matlab and building a simulation environment capable of handling multiple thousands kilometers of test data to evaluate algorithm performance. With changing algorithms it was also necessary to develop new scoring functions. Development of series code was done according to automotive SPICE requirements. In 2013 I was also leading a 8 month project study with a german automotive OEM to identify the potential of new driver monitoring functions.
+
+\graytitle{aquired skills}{statistics, data handling, requirements engineering, change management, Matlab, project management, ASPICE}
+}
+\end{entrylist}
+\begin{entrylist}
+\entry
+{2010--2012}
+{Test manager for driver monitoring software}
+{Robert Bosch GmbH, Stuttgart DE}
+{Responsible for planning automotive software tests from unit to system level. On system level I was also responsible for designing and implementing the test environment for hardware in the loop simulation of a automotive ECU. This had to be integrated into existing quality frameworks and comply with functional safety according to ISO26262.
+
+\graytitle{aquired skills}{systems engineering, project management, vehicle communication (CAN/FlexRay), test methodology, CANoe, VBA}
+}
+\end{entrylist}
+\begin{entrylist}
+\entry
+{2009}
+{Internship - motorcycle hydraulic simulation}
+{Bosch Corporation, Yokohama JP}
+{As part of my studies I accomplished a six months internship in Japan. My task was to create a simulation environment for motorcycle ABS systems. I had to collect requirements from different engineers, research motorcycle hydraulics and then develop a simulation with a user interface. The development was done in Matlab \& Matlab Simulink.
+
+\graytitle{aquired skills}{Matlab, systems engineering, fluid physics, GUI design}
+}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\color{green}interests}
+\begin{itemize}
+\item learning new technologies (blockchain, artificial intelligence, robotics, deep learning)
+\item share \& exchange knowledge on meetups/confs
+\item skiing, biking, diving
+\item cooking
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
