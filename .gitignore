@@ -1,3 +1,7 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+_site
+.sass-cache
+.idea
+resumecard.iml
+/*.iml
+Gemfile.lock
+vendor/
