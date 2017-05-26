@@ -19,7 +19,7 @@ layout: default
                 Side Projects
             </h3>
             {% for project in site.data.projects %}
-            <div class="grid-block profile">
+            <div class="grid-block project">
                 <h4 class="timeline-title" style="display: inline-block;">
                     {% if project.link %}
                     <a href="{{ project.link }}" target="_blank">{{ project.name }}</a>
@@ -37,6 +37,7 @@ layout: default
             </div>
             {% endfor %}
             {% endif %}
+
             {% if site.data.work %}
                 <h3 class="title with-icon">
                     <span class="cat-title fa fa-suitcase"></span>

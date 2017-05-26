@@ -9,6 +9,31 @@ a {
     text-decoration: none;
 }
 
+.btn-red {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #D84E4E;
+    background-image: -moz-linear-gradient(top, #D84E4E, #ba4e4e);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D84E4E), to(#ba4e4e));
+    background-image: -webkit-linear-gradient(top, #D84E4E, #ba4e4e);
+    background-image: -o-linear-gradient(top, #D84E4E, #ba4e4e);
+    background-image: linear-gradient(to bottom, #D84E4E, #ba4e4e);
+    background-repeat: repeat-x;
+    border-color: #555 #555 #333;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn-red,
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active,
+.btn-red.disabled,
+.btn-red[disabled] {
+    color: #ffffff;
+    background-color: #D84E4E;
+}
+
 .btn-dark {
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -63,7 +88,7 @@ hr {
 
 .header img {
     float: left;
-    height: 85px;
+    height: 169px;
     margin-right: 15px;
     padding: 11px;
 }
@@ -125,7 +150,7 @@ hr {
 
 /* profile */
 
-.profile {
+div.profile {
     border: 1px solid #d4d4d4;
     border-radius: 2px;
     padding: 20px;
@@ -133,6 +158,16 @@ hr {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     margin-bottom: 42px;
+}
+
+div.project {
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    margin-bottom: 18px;
 }
 /* timeline css */
 .timeline {
@@ -153,7 +188,7 @@ hr {
 }
 
 .timeline > li {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     position: relative;
     margin-left: 67px;
 }

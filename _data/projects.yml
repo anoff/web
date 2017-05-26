@@ -15,7 +15,7 @@
 
 - name: microlight
   headline: vehicle behavior simulation based on phaser 🚦🚗
-  description: The original idea was to build a traffic light simulation - hence the name - but it turned out to be my playground for **browser based game development** using the [phaser engine](https://phaser.io/) after trying out several others. Check out the demo to see cars moving around a 
+  description: The original idea was to build a traffic light simulation - hence the name - but it turned out to be my playground for **browser based game development** using the [phaser engine](https://phaser.io/) after trying out several others. Check out the demo to see cars moving around the streets, press space to add more cars and see them collide eventually.
   link: https://github.com/anoff/phaser-microlight
   demo: https://anoff.github.io/phaser-microlight/
 
