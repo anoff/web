@@ -15,7 +15,7 @@ languages:
 programming:
   - name: AngularJS
     percentage: 30%
-  - name: nodeJS
+  - name: Node.js
     percentage: 90%
   - name: JavaScript
     percentage: 50%
