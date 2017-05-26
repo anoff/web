@@ -1,0 +1,26 @@
+- name: '#robby5'
+  description: Long term project trying to bring **Node.js** on **robots** to a higher level and integrate it with [ROS](http://www.ros.org/). Trying out different cheap hardware components, bringing together resources in one repository needed to create a robot fullstack from hardware to control logic. This is more of a collaboration project than a single working solution. Check out the repository to see the different robot systems I implemented in there.
+  headline: autonomous robot car 🤖🚗
+  link: https://github.com/anoff/robby5
+
+- name: remote-code
+  description: Automatically sync sourcecode from one computer to another and execute the code remotely. This is a CLI I built to be able to develop **Node.js** programs on my develop machine and execute them on a raspberry pi without having to set up rsync and autoreload manually all the time.
+  link: https://github.com/anoff/remote-code
+
+- name: microllaborators
+  description: During a 24h hackathon two of us built this **distributed web app** with **augmented reality** features. The solution should enable teachers to get feedback anonymously from everyone in the class without the need for additional expensive equipment. To participate you need a phone with a browser capable of WebRTC (currently not supported by Safari 2017-05). Check out the demo and the explanation on the github repo.
+  headline: the revolution in teaching 👩‍👦‍👦🔮🔬👩‍🏫
+  link: https://github.com/anoff/microllaborators
+  demo: https://zeisshack.surge.sh
+
+- name: microlight
+  headline: vehicle behavior simulation based on phaser 🚦🚗
+  description: The original idea was to build a traffic light simulation - hence the name - but it turned out to be my playground for **browser based game development** using the [phaser engine](https://phaser.io/) after trying out several others. Check out the demo to see cars moving around the streets, press space to add more cars and see them collide eventually.
+  link: https://github.com/anoff/phaser-microlight
+  demo: https://anoff.github.io/phaser-microlight/
+
+- name: dancing emojis
+  headline: making emojis dance using WebAudio API 🎤👯
+  description: Inspired by a talk during jsconf.eu 2017 I wanted to give **audio visualization** a try. Open it up in your **browser** and see emojis dance to your voice - or whatever sound you have going on in the room.
+  link: https://github.com/anoff/dancingemojis
+  demo: https://anoff.io/dancingemojis/

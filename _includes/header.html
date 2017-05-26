@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-sm-4">
+                <img src="{{ site.data.author.gavatar | prepend: site.baseurl }}">
+                <h4>{{ site.data.author.name }}</h4>
+                <p>{{ site.data.author.title }}</p>
+                <p class="muted">{{ site.data.author.address }}</p>
+                <a href="resume/resume.pdf" target="about:blank" class="btn btn-red"><i class="fa fa-download"></i> Download resume </a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-sm-4 visible-md-block visible-lg-block visible-sm-block">
+                <p><i class="fa fa-envelope-o fa-fw"></i> {{ site.data.author.email }} </p>
+                <p><i class="fa fa-github fa-fw"></i><a href="//github.com/{{ site.data.author.github }}" target="_blank">{{ site.data.author.github }}</a></p>
+                <p><i class="fa fa-linkedin-square fa-fw"></i> <a href="//linkedin.com/in/{{ site.data.author.linkedin }}" target="_blank"> linkedin.com/in/{{ site.data.author.linkedin }} </a></p>
+                <p><i class="fa fa-twitter fa-fw"></i> <a href="//twitter.com/{{ site.data.author.twitter }}" target="_blank">  @{{ site.data.author.twitter }} </a></p>
+            </div>
+        </div>
+    </div>
+</div>

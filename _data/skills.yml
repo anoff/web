@@ -1,0 +1,57 @@
+languages:
+  - language1:
+    name: German
+    proficiency: Native
+  - language2:
+    name: English
+    proficiency: Professional
+  - language3:
+    name: Japanese
+    proficiency: Beginner
+  - lan4:
+    name: French
+    proficiency: Basic
+
+programming:
+  - name: AngularJS
+    percentage: 30%
+  - name: Node.js
+    percentage: 90%
+  - name: JavaScript
+    percentage: 50%
+  - name: Python
+    percentage: 60%
+  - name: Matlab
+    percentage: 85%
+  - name: C, bash, VBA
+    percentage: 40%
+  - name: Software Quality
+    percentage: 70%
+  - name: Agile methods
+    percentage: 50%
+  - name: Cross domain thinking
+    percentage: 90%
+  - name: Continous Deployment
+    percentage: 75%
+  - name: Project Management
+    percentage: 60%
+
+domains:
+  - name: IoT solutions
+    percentage: 80%
+    fa: cloud
+  - name: Automotive
+    percentage: 70%
+    fa: car
+  - name: Robotics
+    percentage: 40%
+    fa: android
+  - name: Microcontrollers
+    percentage: 70%
+    fa: microchip
+  - name: Artificial Intelligence / Deep Learning
+    percentage: 50%
+    fa: hand-spock-o
+  - name: Blockchain
+    percentage: 30%
+    fa: cubes

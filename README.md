@@ -1,3 +1,3 @@
 # anoffs github pages
 
-based on [sharu725/online-cv](https://github.com/sharu725/online-cv)
+based on [resumecard](https://ddbullfrog.github.io/resumecard)

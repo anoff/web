@@ -77,6 +77,10 @@
 \newcommand{\graytitle}[2]{%
   {\color{lightgray}\thinfont #1} {#2}
 }
+\newcommand{\skills}[2]{
+  \medskip
+  \graytitle{#1}{#2}
+}
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
