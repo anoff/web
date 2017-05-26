@@ -291,11 +291,28 @@ hr {
     left: 7px;
 }
 
-/* stackoverflow css */
-.list-stackoverflow span {
-  margin-right: 5px;
-  width: 35px;
+/* domain skills */
+.list-progress li {
+    height: 42px;
+    margin-bottom: 6px;
+    box-shadow: none;
+    overflow: inherit;
 }
+
+.list-progress li .progress-bar {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    background: #63A4B5;
+    box-shadow: none;
+}
+
+.list-progress li:nth-child(even) .progress-bar {
+    background: #4B6F78;
+}
+
 
 /* skills css */
 .list-skills li .progress {
@@ -312,7 +329,7 @@ hr {
     box-shadow: none;
 }
 
-.list-skills li .progress .progress-bar span {
+.list-skills li .progress .progress-bar span.tip {
     position: relative;
     bottom: -15px;
     font-size: 10px;
@@ -324,7 +341,7 @@ hr {
     border-radius: 5px;
 }
 
-.list-skills li .progress .progress-bar span:after {
+.list-skills li .progress .progress-bar span.tip:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -348,7 +365,7 @@ hr {
 }
 
 .list-strip li:nth-child(even) {
-    background: #BA4E4E;
+    background: #63A4B5;
 }
 
 .btn-flat {

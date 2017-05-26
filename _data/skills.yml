@@ -8,16 +8,42 @@ languages:
   - language3:
     name: Japanese
     proficiency: Beginner
+  - lan4:
+    name: French
+    proficiency: Basic
+
 programming:
-  - skill4:
-    name: AngularJS
+  - name: AngularJS
     percentage: 30%
-  - skill1:
-    name: nodeJS
-    percentage: 50%
-  - skill2:
-    name: JavaScript
+  - name: nodeJS
     percentage: 90%
-  - skill3:
-    name: Python
+  - name: JavaScript
+    percentage: 50%
+  - name: Python
+    percentage: 60%
+  - name: C, bash, VBA
+    percentage: 40%
+  - name: Software Quality
     percentage: 70%
+  - name: Agile methods
+    percentage: 50%
+  - name: Cross domain thinking
+    percentage: 90%
+  - name: Continous Deployment
+    percentage: 75%
+  - name: Project Management
+    percentage: 60%
+
+domains:
+  - name: IoT solutions
+    percentage: 80%
+    fa: cloud
+  - name: Vehicle E/E architecture
+    percentage: 60%
+    fa: car
+  - name: Artificial Intelligence / Deep Learning
+    percentage: 50%
+    fa: hand-spock-o
+  - name: Blockchain technology
+    percentage: 40%
+    fa: cubes
