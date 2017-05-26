@@ -1,0 +1,28 @@
+- work2016:
+  company: Robert Bosch GmbH
+  location: Stuttgart, Germany
+  title: Solution Architect
+  started: 2016
+  duration: (2016 - Present)
+  description: Developing solutions for connected services using latest technologies like Docker, Gitlab & nodeJS. My job is to make sure that our different products keep a common technology stack, evaluate new technologies with regard to compatibility and identify potential for further collaboration within the company.
+- work2014:
+  company: dghdfghd
+  location: Stuttgart, Germany
+  title: Backend developer connected vehicle
+  started: 2014
+  duration: (2014 - 2016)
+  description: Responsible to design and build a prototype system for a connected vehicle service. I lead a team of up to five to bring a fullstack solution featuring nodeJS and angularJS deployed on a single VM to live.
+- work2012:
+  company: Robert Bosch GmbH
+  location: Stuttgart, Germany
+  title: Function developer for driver monitoring
+  started: 2012
+  duration: (2012 - 2014)
+  description: Today it would be called a (big) data analysts job - back then I was responsible to develop a simulation framework capable of handling multiple thousands kilometers of test data to evaluate algorithm performance, improve data quality, come up with proper loss functions as well as implement audit proof change management functionality. Embedded in an overall project team myself and one other colleague used this framework to advance driver monitoring solutions for global OEMs on a functional level.
+- work2010:
+  company: Robert Bosch GmbH
+  location: Stuttgart, Germany
+  title: Test manager for driver monitoring software
+  started: 2010
+  duration: (2010 - 2012)
+  description: My job as test manager included developing a ISO26262 compliant test plan to cover tests from unit to system level. For tests on system level I was responsible to design, implement and contract a new framework to execute hardware in the loop simulation for automotive ECUs.
