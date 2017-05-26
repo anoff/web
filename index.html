@@ -4,8 +4,26 @@ layout: default
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="col-md-8">
+            {% if site.data.intro %}
+            <h3 class="title with-icon">
+                <span class="cat-title fa fa-vcard"></span>
+                Profile
+            </h3>
+            <div class="grid-block profile">
+                <p>{{ site.data.intro.text | markdownify }}</p>
+            </div>
+            {% endif %}
+            {% if site.data.projects %}
+            <h3 class="title with-icon">
+                <span class="cat-title fa fa-heart"></span>
+                Side Projects
+            </h3>
+            {% endif %}
             {% if site.data.work %}
-                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
+                <h3 class="title with-icon">
+                    <span class="cat-title fa fa-suitcase"></span>
+                    Work Experience
+                </h3>
                 <ul class="timeline">
                     {% for work in site.data.work %}
                         <li class="timeline-inverted">
@@ -46,7 +64,10 @@ layout: default
                 </ul>
             {% endif %}
             {% if site.data.education %}
-                <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
+                <h3 class="title with-icon">
+                    <span class="cat-title fa fa-book"></span>
+                    Education
+                </h3>
                 <ul class="timeline">
                     {% for education in site.data.education %}
                         <li class="timeline-inverted">
