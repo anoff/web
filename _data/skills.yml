@@ -21,6 +21,8 @@ programming:
     percentage: 50%
   - name: Python
     percentage: 60%
+  - name: Matlab
+    percentage: 85%
   - name: C, bash, VBA
     percentage: 40%
   - name: Software Quality
@@ -38,12 +40,18 @@ domains:
   - name: IoT solutions
     percentage: 80%
     fa: cloud
-  - name: Vehicle E/E architecture
-    percentage: 60%
+  - name: Automotive
+    percentage: 70%
     fa: car
+  - name: Robotics
+    percentage: 40%
+    fa: android
+  - name: Microcontrollers
+    percentage: 70%
+    fa: microchip
   - name: Artificial Intelligence / Deep Learning
     percentage: 50%
     fa: hand-spock-o
-  - name: Blockchain technology
-    percentage: 40%
+  - name: Blockchain
+    percentage: 30%
     fa: cubes
