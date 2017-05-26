@@ -2,7 +2,7 @@
 title: andreas offenhaeuser
 description: resume and portfolio
 favicon: /assets/img/avatar.JPG
-baseurl: https://anoff.io
+#baseurl: https://anoff.io
 google_analytics:
 
 # Build settings
@@ -20,7 +20,7 @@ author:
   weibo:
   github: anoff
   linkedin: anoff
-  twitter: '@an0xff'
+  twitter: an0xff
   gavatar: /resumecard/assets/img/avatar.JPG
   stackoverflow:
   workHistory:
