@@ -10,6 +10,7 @@ layout: default
                 Profile
             </h3>
             <div class="grid-block profile">
+                <h4 class="timeline-title">{{ work.title }} </h4>
                 <p>{{ site.data.intro.text | markdownify }}</p>
             </div>
             {% endif %}
@@ -18,6 +19,18 @@ layout: default
                 <span class="cat-title fa fa-heart"></span>
                 Side Projects
             </h3>
+            {% for project in site.data.projects %}
+            <div class="grid-block profile">
+                <h4 class="timeline-title">
+                    {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank">{{ project.name }}</a>
+                    {% else %}
+                    {{ project.name }}
+                    {% endif %}
+                    </h4>
+                <p>{{ project.description | markdownify }}</p>
+            </div>
+            {% endfor %}
             {% endif %}
             {% if site.data.work %}
                 <h3 class="title with-icon">

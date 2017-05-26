@@ -272,6 +272,14 @@ hr {
     color: inherit;
 }
 
+.timeline-title > a:link, a:visited {
+    color: #63A4B5;
+}
+
+.timeline-title > a:active {
+    color: hotpink;
+}
+
 .timeline-body > p,
 .timeline-body > ul {
     margin-bottom: 0;
