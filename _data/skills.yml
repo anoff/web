@@ -1,0 +1,23 @@
+languages:
+  - language1:
+    name: German
+    proficiency: Native
+  - language2:
+    name: English
+    proficiency: Professional
+  - language3:
+    name: Japanese
+    proficiency: Beginner
+programming:
+  - skill4:
+    name: AngularJS
+    percentage: 30%
+  - skill1:
+    name: nodeJS
+    percentage: 50%
+  - skill2:
+    name: JavaScript
+    percentage: 90%
+  - skill3:
+    name: Python
+    percentage: 70%

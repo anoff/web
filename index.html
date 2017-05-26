@@ -4,23 +4,23 @@ layout: default
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="col-md-8">
-            {% if site.author.workHistory %}
+            {% if site.data.work %}
                 <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
                 <ul class="timeline">
-                    {% for work in site.author.workHistory %}
+                    {% for work in site.data.work %}
                         <li class="timeline-inverted">
                             {% if work.started %}
                                 <div class="timeline-badge info">{{ work.started }}</div>
                             {% endif %}
                             <div class="timeline-panel grid-block">
                                 <div class="timeline-heading">
-                                    {% if work.company %}
-                                        <h4 class="timeline-title">{{ work.company }} </h4>
+                                    {% if work.title %}
+                                        <h4 class="timeline-title">{{ work.title }} </h4>
                                     {% endif %}
                                     <p>
                                         <small class="text-muted">
-                                            {% if work.title %}
-                                                {{ work.title }}
+                                            {% if work.company %}
+                                                {{ work.company }}
                                             {% endif %}
                                         </small>
                                     </p>
@@ -45,10 +45,10 @@ layout: default
                     {% endfor %}
                 </ul>
             {% endif %}
-            {% if site.author.educationHistory %}
+            {% if site.data.education %}
                 <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
                 <ul class="timeline">
-                    {% for education in site.author.educationHistory %}
+                    {% for education in site.data.education %}
                         <li class="timeline-inverted">
                             {% if education.started %}
                                 <div class="timeline-badge info">{{ education.started }}</div>
@@ -71,7 +71,10 @@ layout: default
                                     <p>
                                         <small class="text-muted">
                                             {% if education.duration %}
-                                                <i class="fa fa-calendar"></i> {{ education.duration }} |
+                                                <i class="fa fa-calendar"></i> {{ education.duration }}
+                                            {% endif %}
+                                            {% if education.duration and education.location %}
+                                             |
                                             {% endif %}
                                             {% if education.location %}
                                                 <i class="fa fa-map-marker"></i>  {{ education.location }}
@@ -91,12 +94,11 @@ layout: default
             {% endif %}
         </div>
         <div class="col-md-4">
-            {% if site.author.stackoverflow or site.author.programmingSkills %}
+            {% if site.data.skills.programming %}
                 <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
-                {% if site.author.programmingSkills %}
                 <div class="grid-block">
                     <ul class="list-unstyled list-skills">
-                        {% for programmingSkill in site.author.programmingSkills %}
+                        {% for programmingSkill in site.data.skills.programming %}
                             <li>
                                 {% if programmingSkill.name %}
                                     <span class="caption-skill">{{ programmingSkill.name }}</span>
@@ -112,20 +114,17 @@ layout: default
                         {% endfor %}
                     </ul>
                 </div>
-                {% endif %}
             {% endif %}
-            {% if site.author.languages %}
+            {% if site.data.skill.languages %}
                 <div class="deviter"></div>
                 <h3 class="title with-icon"><span class="fa fa-globe cat-title"></span> Language Skills</h3>
                 <div class="grid-block">
                     <ul class="list-unstyled list-strip">
-                        {% for language in site.author.languages %}
-                            {% if language.name %}
-                                {% if language.proficiency %}
-                                    <li>
-                                        <i class="fa fa-check"></i> <span class="badge badge-green badge-right-float">{{ language.proficiency }}</span>{{ language.name }}
-                                    </li>
-                                {% endif %}
+                        {% for language in site.data.skill.languages %}
+                            {% if language.name and language.proficiency %}
+                                <li>
+                                    <i class="fa fa-check"></i> <span class="badge badge-green badge-right-float">{{ language.proficiency }}</span>{{ language.name }}
+                                </li>
                             {% endif %}
                         {% endfor %}
                     </ul>

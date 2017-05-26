@@ -6,12 +6,12 @@
   duration: (2016 - Present)
   description: Developing solutions for connected services using latest technologies like Docker, Gitlab & nodeJS. My job is to make sure that our different products keep a common technology stack, evaluate new technologies with regard to compatibility and identify potential for further collaboration within the company.
 - work2014:
-  company: dghdfghd
+  company: Robert Bosch GmbH
   location: Stuttgart, Germany
   title: Backend developer connected vehicle
   started: 2014
   duration: (2014 - 2016)
-  description: Responsible to design and build a prototype system for a connected vehicle service. I lead a team of up to five to bring a fullstack solution featuring nodeJS and angularJS deployed on a single VM to live.
+  description: Responsible to design and build a prototype system for a connected vehicle service. I lead a team of up to five to bring a fullstack solution featuring nodeJS and angularJS deployed on a single VM to live. Besides the backend system I also came up with solutions of how to bring the backend data into the vehicle. For that I highly relied on my previous experience with vehicle communication systems and automotive ECUs.
 - work2012:
   company: Robert Bosch GmbH
   location: Stuttgart, Germany
