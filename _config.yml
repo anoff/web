@@ -1,8 +1,10 @@
 # Site settings
-title: andreas offenhaeuser
-description: resume and portfolio
+title: Andreas Offenhaeuser 🂻
+description: Andreas' online portfolio and life story. See the pdf download for a classic resume.
+# meta tags
+meta: IoT internet of things architect developer fullstack javascript automotive
 favicon: favicon.ico
-#baseurl: https://anoff.io
+url: https://anoff.io
 google_analytics: UA-93890295-2
 
 # Build settings
