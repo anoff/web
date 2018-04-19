@@ -1,3 +1,8 @@
+- name: '#blob'
+  description: Writing down my learnings in various areas of coding. All learnings/posts done in my free time. Most articles have a [Github](https://github.com/anoff) with relevant code.
+  headline: Adventures of a Software Developer/Architect 🎢
+  link: https://anoff.io/blog
+
 - name: '#robby5'
   description: Long term project trying to bring **Node.js** on **robots** to a higher level and integrate it with [ROS](http://www.ros.org/). Trying out different cheap hardware components, bringing together resources in one repository needed to create a robot fullstack from hardware to control logic. This is more of a collaboration project than a single working solution. Check out the repository to see the different robot systems I implemented in there.
   headline: autonomous robot car 🤖🚗
