@@ -1,4 +1,4 @@
-- name: '#blob'
+- name: 'blog'
   description: Writing down my learnings in various areas of coding. All learnings/posts done in my free time. Most articles have a [Github](https://github.com/anoff) with relevant code.
   headline: Adventures of a Software Developer/Architect 🎢
   link: https://anoff.io/blog
