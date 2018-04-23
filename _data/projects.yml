@@ -29,3 +29,9 @@
   description: Inspired by a talk during jsconf.eu 2017 I wanted to give **audio visualization** a try. Open it up in your **browser** and see emojis dance to your voice - or whatever sound you have going on in the room.
   link: https://github.com/anoff/dancingemojis
   demo: https://anoff.io/dancingemojis/
+
+- name: demo one
+  headline: my (first) attempt at writing a C++ based graphics demo 🌏💥
+  description: Spending a weekend at the world's largest demo party ([revision 2018](https://2018.revision-party.net/)) I learned the basics of drawing on a 2D canvas with C++ and how to build basic 3D raytracing and texture mapping on spheres. No graphic libraries - just code.
+  link: https://github.com/anoff/demo-one
+  demo: https://anoff.gitlab.io/-/demo-one/-/jobs/62464996/artifacts/dist/out-wasm.html
