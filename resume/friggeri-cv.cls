@@ -73,6 +73,7 @@
 
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
+\usepackage{xstring}
 
 \newcommand{\rolefont}{%
   \fontsize{14pt}{24pt}\selectfont%
@@ -100,8 +101,10 @@
     \node [anchor=north east] (version) at (box.north east) {%
       \if\instring{COMMIT}{#4}%
       \else%
-        \fontsize{10pt}{14pt}\color{green}%
-        \thinfont #4%
+        \fontsize{6pt}{8pt}\color{header}%
+        \thinfont version %
+        \fontsize{8pt}{12pt}\color{green}%
+        \thinfont \StrSubstitute{#4}{git:}{}%
       \fi%
     };
   \end{tikzpicture}
