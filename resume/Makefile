@@ -3,8 +3,7 @@
 COMMIT_SHA := $(shell git rev-parse --short=8 HEAD)
 
 inject-git-version:
-	cp resume.tex resume.bk.tex
-	sed -i -E 's/\({git:\)[[:alnum:]]*\(}\)/\1${COMMIT_SHA}\2/' resume.tex
+	sed -i.bak 's/\({git:\)[[:alnum:]]*\(}\)/\1${COMMIT_SHA}\2/' resume.tex
 
 verify-git-clean:
 	git diff-index --quiet HEAD
@@ -13,6 +12,6 @@ pdf:
 	docker run -v ${CURDIR}:/doc/ -t -i thomasweise/texlive xelatex.sh resume.tex
 
 clean:
-	mv resume.bk.tex resume.tex
+	mv resume.tex.bak resume.tex
 
 build: verify-git-clean inject-git-version pdf clean
