@@ -1,7 +1,13 @@
 - name: 'blog'
-  description: Writing down my learnings in various areas of coding. All learnings/posts done in my free time. Most articles have a [Github](https://github.com/anoff) with relevant code.
+  description: Writing down my learnings in various areas of coding. All learnings/posts done in my free time. Most articles have a [Github](https://github.com/anoff) with related code.
   headline: Adventures of a Software Developer/Architect 🎢
   link: https://anoff.io/blog
+
+- name: plantbuddy
+  headline: nodeMCU based moisture monitoring for plants 🌱 with a serverless backend
+  description: Wanting to develop a small IoT solution I built plantbuddy as a standalone solution with device code written in C for **ESP8266** microcontrollers, using **Googles Firebase** infrastructure as a database and **VueJS** as a frontend. See repository for details on the system design.
+  link: https://github.com/anoff/plantbuddy
+  demo: http://plantbuddy.site/
 
 - name: '#robby5'
   description: Long term project trying to bring **Node.js** on **robots** to a higher level and integrate it with [ROS](http://www.ros.org/). Trying out different cheap hardware components, bringing together resources in one repository needed to create a robot fullstack from hardware to control logic. This is more of a collaboration project than a single working solution. Check out the repository to see the different robot systems I implemented in there.
@@ -17,12 +23,6 @@
   headline: the revolution in teaching 👩‍👦‍👦🔮🔬👩‍🏫
   link: https://github.com/anoff/microllaborators
   demo: https://zeisshack.surge.sh
-
-- name: microlight
-  headline: vehicle behavior simulation based on phaser 🚦🚗
-  description: The original idea was to build a traffic light simulation - hence the name - but it turned out to be my playground for **browser based game development** using the [phaser engine](https://phaser.io/) after trying out several others. Check out the demo to see cars moving around the streets, press space to add more cars and see them collide eventually.
-  link: https://github.com/anoff/phaser-microlight
-  demo: https://anoff.github.io/phaser-microlight/
 
 - name: dancing emojis
   headline: making emojis dance using WebAudio API 🎤👯
