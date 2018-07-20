@@ -43,6 +43,10 @@
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
 
+% https://tex.stackexchange.com/questions/26870/check-if-a-string-contains-a-given-character
+\def\instring#1#2{TT\fi\begingroup
+  \edef\x{\endgroup\noexpand\in@{#1}{#2}}\x\ifin@}
+
 %%%%%%%%%
 % Fonts %
 %%%%%%%%%
@@ -68,6 +72,7 @@
 %%%%%%%%%%
 
 \RequirePackage{tikz}
+\usetikzlibrary{positioning}
 
 \newcommand{\rolefont}{%
   \fontsize{14pt}{24pt}\selectfont%
@@ -81,16 +86,23 @@
   \medskip
   \graytitle{#1}{#2}
 }
-\newcommand{\header}[3]{%
+\newcommand{\header}[4]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
+    \node [anchor=north] (job) at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
       \thinfont #3%
+    };
+    \node [anchor=north east] (version) at (box.north east) {%
+      \if\instring{COMMIT}{#4}%
+      \else%
+        \fontsize{10pt}{14pt}\color{green}%
+        \thinfont #4%
+      \fi%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
