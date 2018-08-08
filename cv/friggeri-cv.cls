@@ -223,6 +223,7 @@
 %%%%%%%%%%%%%%%%
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+% https://tex.stackexchange.com/questions/372181/how-to-add-a-link-that-opens-a-different-pdf-in-a-new-window
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=true,       
