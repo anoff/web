@@ -86,6 +86,11 @@
   \medskip
   \graytitle{#1}{#2}
 }
+\newcommand{\project}[3]{
+  \textbf{\large\href{#2}{#1}}
+  \newline
+  {\thinfont #3}
+}
 \newcommand{\header}[4]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3.3cm] (box) at (current page.north){};
@@ -203,7 +208,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.8}(1.5, 3.33)
+  \begin{textblock}{4.1}(1.5, 3.33)
   \begin{flushright}
   \obeycr
 }{%

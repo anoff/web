@@ -19,7 +19,7 @@
   major: Mechatronics (specialized in control systems)
   started: 2007
   duration: (2007 - 2010)
-  description: With a grant from Bosch I studied different fields of mechatronics and microsystems engineering. In 2009 I spent 6 months in Japan to develop a simulation environment for motorcycle brake systems during my internship.
+  description: With a grant from Bosch I studied different fields of mechatronics and microsystems engineering. In 2009 I spent 6 months in Japan to develop a simulation environment for motorcycle brake systems during my internship. Apart from my bachelor thesis there was one bigger project (4 months) that had to be completed which centered around a 2-DOF robot system made up of three joint SCARA robots. The project combined programming in Matlab/Simulink with physics and geometry for robot control. For my thesis I analyzed the influence of advanced driver assistance systems on steering based driver monitoring systems. The main focus was on data analytics and combined Matlab with scientific knowledge.
 - vocational:
   organization: Robert Bosch GmbH
   location: Stuttgart, Germany
@@ -27,4 +27,4 @@
   major: Mechatronics
   started: 2005
   duration: (2005 - 2007)
-  description: During my vocational training I learned the basics of engineering and how they relate to the physical world. The broad scope of topics covered in mechatronics also quickly made me realize my love for programming over the other possible fields in engineering.
+  description: During my vocational training I learned the basics of engineering and how they relate to the physical world. The broad scope of topics covered in mechatronics also quickly made me realize my love for programming over the other possible fields in engineering. During the training two major projects had to be completed. The first one was the design and manufacturing of a adjustable power supply, the second was the construction of a 3 DOF assembly robot.
