@@ -9,7 +9,7 @@ verify-git-clean:
 	git diff-index --quiet HEAD
 
 pdf:
-	docker run -v ${CURDIR}:/doc/ -t -i thomasweise/texlive xelatex.sh resume.tex
+	docker run -v ${CURDIR}:/doc/ -t -i thomasweise/texlive lualatex.sh resume.tex
 
 clean:
 	mv resume.tex.bak resume.tex
