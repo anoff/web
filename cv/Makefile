@@ -1,8 +1,8 @@
 .PHONY: pdf inject-git-version verify-git-clean clean commit
 
 COMMIT_SHA := $(shell git rev-parse --short=8 HEAD)
-FILE_TEX := ./cv-anoff.tex # latex filename
-FILE_PDF := ./cv-anoff.pdf # desired pdf filename
+FILE_TEX := ./cv-anoff.tex# latex filename
+FILE_PDF := ./cv-anoff.pdf# desired pdf filename
 FILE_OUT = $(shell echo ${FILE_TEX} | sed -e 's/\.tex/\.pdf/') # the (intermediate) file outputted by tex
 
 inject-git-version:
