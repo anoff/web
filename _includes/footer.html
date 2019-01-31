@@ -3,6 +3,11 @@
         <div class="row-fluid">
             <div class="col-md-12">
                 &copy; {{ site.data.author.name }}
+                {{ site.time | date: '%Y' }}
+                {% if site.legal.url %}
+                &nbsp;&bull;&nbsp;
+                <a href="{{ site.legal.url }}" target="_blank">{{ site.legal.text }}</a>
+                {% endif %}
             </div>
         </div>
     </div>
