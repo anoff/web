@@ -1,7 +1,7 @@
 - name: 'blog'
   description: Writing down my learnings in various areas of coding. All learnings/posts done in my free time. Most articles have a [Github](https://github.com/anoff) with related code.
   headline: Adventures of a Software Developer/Architect 🎢
-  link: https://anoff.io/blog
+  link: https://blog.anoff.io/
 
 - name: plantbuddy
   headline: nodeMCU based moisture monitoring for plants 🌱 with a serverless backend
