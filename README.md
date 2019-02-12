@@ -7,5 +7,5 @@ based on [resumecard](https://ddbullfrog.github.io/resumecard)
 To run jekyll locally without having to install everything
 
 ```sh
-docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll   -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll serve --force_polling
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll serve
 ```
