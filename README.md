@@ -1,11 +1,14 @@
-# anoffs github pages
+# Andreas' landing page
 
-based on [resumecard](https://ddbullfrog.github.io/resumecard)
-
-## usage
-
-To run jekyll locally without having to install everything
+## Local preview
 
 ```sh
-docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll serve
+docker run --rm -v $PWD:/app -p 1313:1313 anoff/hugo-asciidoctor hugo server -D --bind 0.0.0.0
+```
+
+## Deployment
+
+```sh
+# generate the static site
+docker run --rm -v $PWD:/app anoff/hugo-asciidoctor hugo --gc --minify -d _site
 ```

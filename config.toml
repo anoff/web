@@ -1,0 +1,144 @@
+title = "Andreas Offenhaeuser"
+# Add an trailing slash to ensure that all fonts render correctly.
+baseURL = "//anoff.io/"
+theme = "bilberry-hugo-theme"
+
+enableRobotsTXT = true
+
+# Change to one of your content languages definded at the end.
+DefaultContentLanguage = "en"
+
+# Enable / Disable Google Analytics statistics for your site
+googleAnalytics = "UA-93890295-4"
+
+# Enable / Disable comments on the articles via Disqus.
+disqusShortname = "anoff-io"
+
+# Enable / Disable open link with a new tab.
+[blackfriday]
+  hrefTargetBlank = false
+
+[params]
+  # Favicon for the browser's favorites and tabs
+  favicon = "favicon" # set a favicon icon
+
+  # Custom CSS / JS modules that will be imported by the template.
+  # Files are relative to the static/ directory or a URL.
+  # Files are imported in the order they appear here, after
+  # theme.css and theme.js, respectively.
+  css_modules = ["adoc.css", "overwrites.css", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
+  js_modules = ["fix-adoc.js", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js", "init-cookieconsent.js"]
+
+  # Description and meta data for the search engines
+  author = "Andreas Offenhaeuser"
+  description = "Andreas' personal website"
+  keywords = "personal,software,architecture,system,node,plantuml,developer"
+
+  # How many articles should be displayed at once?
+  paginate = 14
+
+  # Enable / Disable MathJax
+  enable_mathjax    = false
+
+  # Enable / Disable algolia search
+  algolia_search    = false
+  algolia_appId     = "Y2C4RWMPXW"
+  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
+  algolia_indexName = "default-content"
+    # Set this option to false if you want to search within all articles in all languages at once
+    algolia_currentLanguageOnly = true
+
+  # Style configuration
+    # set the width of your site's content
+    siteWidth = "1240px"
+
+    # let hugo automatically resize and crop your images to the correct sizes
+    resizeImages = true
+
+  # Header configuration
+    # your subtitle if you want to use any
+    subtitle = "Software engineer/architect"
+
+    # if you want to use gravatar for the header image
+    gravatarEMail = ""
+
+    # set an path to the image file you want to use | overwrites gravatar
+    customImage = "avatar.png"
+
+    # define the icon you want to use for the overlay for the customImage or gravatar.
+    overlayIcon = "fa-child"
+
+    # always display the top navigation (with pages and search) on non-mobile screens
+    permanentTopNav = true
+
+    # show a language chooser in the header
+    showHeaderLanguageChooser = false
+
+  # Content configuration
+    # Enable an optional pinned page to display at the top of the index
+    # pinnedPost = "/content/github/"
+    # Set to true to pin only to the first page, false to all pages
+    # pinOnlyToFirstPage = true
+
+    # enable automatical localization of the article's PublishedDate with momentjs
+    enableMomentJs = true
+
+    # customize the date format | only works if momentjs is disabled | only works with English month names
+    # you can customize it with the options you find here:
+    # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    dateFormat = "2006-10-30"
+
+    # display the estimated reading time for an article
+    showReadingTime = true
+
+  # Footer configuration
+    showFooter = true
+
+    # How many articles should be displayed at latest posts in the footer?
+    # Set to -1 to hide the 'Latest Posts' column
+    amountLatestPostsInFooter = -1
+
+    # How many categories should be displayed in the footer section?
+    # Set to -1 to hide the 'Categories' column
+    amountCategoriesInFooter = -1
+
+    # show a language chooser in the header
+    showFooterLanguageChooser = false
+
+    # social media profile urls for the footer links
+    showSocialMedia = true
+
+    twitter    = "//twitter.com/an0xff"
+    pinterest  = ""
+    instagram  = ""
+    tumblr     = ""
+    youtube    = ""
+    vimeo      = ""
+    github     = "//github.com/anoff"
+    linkedin   = "//linkedin.com/in/offenhaeuser/"
+
+    # credits line configuration
+    copyrightBy = "by Andreas Offenhaeuser"
+    copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
+    copyrightYearOverride = ""
+    copyrightUrl = "//anoff.io"
+    creditsText = "Bilberry Hugo Theme"
+    creditsUrl = "//github.com/Lednerb/bilberry-hugo-theme"
+
+# Rewrite URLs to keep previous Jekyll links alive
+#   https://gohugo.io/content-management/urls/
+[permalinks]
+  code = "/:filename"
+  article = "/:filename"
+  book = "/:filename"
+
+# don't change anything below
+[taxonomies]
+  author   = "author"
+  tag      = "tags"
+  category = "categories"
+
+[outputs]
+  home = [ "HTML", "JSON", "RSS" ]
+  page = [ "HTML" ]
+

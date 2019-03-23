@@ -1,0 +1,35 @@
+kind: pipeline
+name: deploy
+
+clone:
+  depth: 50
+
+steps:
+
+- name: submodules
+  image: docker:git
+  commands:
+  - git submodule update --init --recursive
+
+- name: hotfix 
+  image: anoff/hugo-asciidoctor
+  commands:
+  - cp -R theme_fixes/** themes/bilberry-hugo-theme
+
+- name: build
+  image: anoff/hugo-asciidoctor
+  commands:
+  - hugo --gc --minify -d _site --baseURL //anoff.io
+  - touch _site/.nojekyll
+
+- name: publish  
+  image: plugins/gh-pages
+  settings:
+    username:
+      from_secret: github_username
+    password:
+      from_secret: github_token
+    pages_directory: _site
+  when:
+    branch:
+    - master
