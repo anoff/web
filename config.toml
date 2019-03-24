@@ -12,7 +12,7 @@ DefaultContentLanguage = "en"
 googleAnalytics = "UA-93890295-4"
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = "anoff-io"
+# disqusShortname = "anoff-io"
 
 # Enable / Disable open link with a new tab.
 [blackfriday]
@@ -124,6 +124,9 @@ disqusShortname = "anoff-io"
     copyrightUrl = "//anoff.io"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "//github.com/Lednerb/bilberry-hugo-theme"
+
+    # custom stuff
+    useHomepage = true
 
 # Rewrite URLs to keep previous Jekyll links alive
 #   https://gohugo.io/content-management/urls/
