@@ -5,3 +5,4 @@ resumecard.iml
 /*.iml
 Gemfile.lock
 vendor/
+resources/
