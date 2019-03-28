@@ -125,15 +125,13 @@ googleAnalytics = "UA-93890295-4"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "//github.com/Lednerb/bilberry-hugo-theme"
 
-    # custom stuff
-    useHomepage = true
-
 # Rewrite URLs to keep previous Jekyll links alive
 #   https://gohugo.io/content-management/urls/
 [permalinks]
   code = "/:filename"
   article = "/:filename"
   book = "/:filename"
+  landing = "/:filename"
 
 # don't change anything below
 [taxonomies]

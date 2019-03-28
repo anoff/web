@@ -1,8 +1,8 @@
 <a class="bubble" href="{{ .URL }}">
-    <i class="fa fa-fw {{or .Params.icon "fa-wrench" }}"></i>
+    <i class="fa fa-fw {{or .Params.icon "fa-user-circle" }}"></i>
 </a>
 
 <article class="default article">
     {{ partial "featured-image" . }}
-    {{ partial "project-content" . }}
+    {{ partial "landing-content" . }}
 </article>

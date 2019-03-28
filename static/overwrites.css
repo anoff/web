@@ -22,3 +22,16 @@ figure.listing-block {
 	background-color: #fff;
 	box-shadow: none;
 }
+h3.inline {
+  display: inline;
+}
+span.quote {
+  font-style: italic;
+  color: #888;
+  font-size: 1.2em;
+}
+span.quote::before {
+  margin-left: 10px;
+  margin-right: 10px;
+  content: " — "
+}

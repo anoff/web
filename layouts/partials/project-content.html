@@ -1,0 +1,18 @@
+<div class="content">
+    <h3 class="inline">{{ .Title }}</h3>
+    <span class="quote">{{ .Params.headline }}</span>
+    
+    <div class="meta">
+        {{ if ( .Params.date ) }}
+            <span class="date">{{ .Date.Format "January 2006" }}</span>
+        {{ end }}
+        {{ if ( .Params.demo | default false ) }}
+            <span><a href="{{ .Params.demo }}" target="_blank">Demo</a></span>
+        {{ end }}
+
+        {{ if ( .Params.github | default false ) }}
+            <span><a href="{{ .Params.github }}" target="_blank">GitHub Code</a></span>
+        {{ end }}
+    </div>
+    {{ .Content }}
+</div>
