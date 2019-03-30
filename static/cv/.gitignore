@@ -1,3 +1,5 @@
 *.aux
 *.log
 *.out
+.COMMIT_SHA
+cv-anoff.pdf
