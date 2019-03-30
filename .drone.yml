@@ -16,7 +16,22 @@ steps:
   commands:
   - cp -R theme_fixes/** themes/bilberry-hugo-theme
 
-- name: build
+- name: tag-cv
+  image: alpine/git
+  commands:
+  - cd static/cv
+  - git rev-list --abbrev-commit -1 HEAD cv-anoff.tex > .COMMIT_SHA
+
+- name: build-cv
+  image: thomasweise/texlive
+  commands:
+  - cd static/cv
+  - export COMMIT_SHA=$(cat .COMMIT_SHA)
+  - sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff.tex
+  - lualatex.sh cv-anoff.tex || echo "Ignoring original.pdf error"
+  - mv cv-anoff.tex.bak cv-anoff.tex
+
+- name: build-page
   image: anoff/hugo-asciidoctor
   commands:
   - hugo --gc --minify -d _site --baseURL https://anoff.io
