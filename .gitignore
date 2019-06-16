@@ -6,3 +6,4 @@ resumecard.iml
 Gemfile.lock
 vendor/
 resources/
+static/cv/cv-anoff.pdf
