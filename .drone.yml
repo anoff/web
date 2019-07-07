@@ -42,7 +42,7 @@ steps:
   - lualatex.sh cv-anoff-print.tex || echo "Ignoring original.pdf error"
   - rm cv-anoff-print.tex
 
-  - name: build-page
+- name: build-page
   image: anoff/hugo-asciidoctor
   commands:
   - hugo --gc --minify -d _site --baseURL https://anoff.io
