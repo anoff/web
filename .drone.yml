@@ -37,8 +37,8 @@ steps:
   - cd static/cv
   - cp cv-anoff.tex cv-anoff-print.tex
   - export COMMIT_SHA=$(cat .COMMIT_SHA)
-  - sed "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff-print.tex
-  - sed "s/\([[:alnum:]]*documentclass\[\)\([[:alnum:]]*\)\(\]{friggeri-cv}.[[:alnum:]]*\)/\1print\2\3/" cv-anoff-print.tex
+  - sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff-print.tex
+  - sed -i.bak "s/\([[:alnum:]]*documentclass\[\)\([[:alnum:]]*\)\(\]{friggeri-cv}.[[:alnum:]]*\)/\1print\2\3/" cv-anoff-print.tex
   - lualatex.sh cv-anoff-print.tex || echo "Ignoring original.pdf error"
   - rm cv-anoff-print.tex
 
