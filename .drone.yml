@@ -56,6 +56,7 @@ steps:
     password:
       from_secret: github_token
     pages_directory: _site
+    target_branch: master
   when:
     branch:
-    - master
+    - source
