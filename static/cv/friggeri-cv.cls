@@ -188,12 +188,16 @@
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
 % date, position, location, company, text
-  #1&\parbox[t]{11.8cm}{%
+  \begin{minipage}[t]{0.15\textwidth}%
+  #1
+  \end{minipage}%
+  \begin{minipage}[t]{0.8\textwidth}%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
-  }\\}
+  \end{minipage}%
+  \\}
 
 
 %%%%%%%%%%%%%%

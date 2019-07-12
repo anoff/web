@@ -21,4 +21,4 @@ clean:
 commit:
 	git commit -am ":construction_worker: build: CV update"
 
-build: verify-git-clean inject-git-version pdf clean commit
+build: inject-git-version pdf clean

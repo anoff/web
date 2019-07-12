@@ -5,8 +5,7 @@ icon: "fa-user-circle"
 target: "_self"
 ---
 
-Since 2019 I work as a systems architect for autonomous vehicles.
-Besides understanding and structuring complex systems I am actively applying my knowledge in developer focused processes, methods and tools by setting up a toolchain for automated driving developers.
+Since 2019 I work as a DevOps architect in the domain of automated driving.
 For this I bring state of the art methods like Continuous Integration, Containerization and an increased responsibility in the development team (DevOps-ish) into the world of embedded automotive systems.
 
 Before I worked as a solution architect for connected services in the domain of automated driving.
