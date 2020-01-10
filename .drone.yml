@@ -23,7 +23,7 @@ steps:
   - git rev-list --abbrev-commit -1 HEAD cv-anoff.tex > .COMMIT_SHA
 
 - name: build-cv
-  image: thomasweise/texlive
+  image: thomasweise/texlive:1.0.0
   commands:
   - cd static/cv
   - export COMMIT_SHA=$(cat .COMMIT_SHA)
@@ -32,7 +32,7 @@ steps:
   - mv cv-anoff.tex.bak cv-anoff.tex
 
 - name: build-cv-print
-  image: thomasweise/texlive
+  image: thomasweise/texlive:1.0.0
   commands:
   - cd static/cv
   - cp cv-anoff.tex cv-anoff-print.tex
