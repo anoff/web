@@ -23,16 +23,20 @@ steps:
   - git rev-list --abbrev-commit -1 HEAD cv-anoff.tex > .COMMIT_SHA
 
 - name: build-cv
-  image: thomasweise/texlive:1.0.0
+  image: thomasweise/texlive
   commands:
   - cd static/cv
+  - echo "LINE25:PRE:"
+  - cat cv-anoff.tex| head -n 25 | tail -n 1
   - export COMMIT_SHA=$(cat .COMMIT_SHA)
   - sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff.tex
+  - echo "LINE25:POST:"
+  - cat cv-anoff.tex| head -n 25 | tail -n 1
   - lualatex.sh cv-anoff.tex || echo "Ignoring original.pdf error"
   - mv cv-anoff.tex.bak cv-anoff.tex
 
 - name: build-cv-print
-  image: thomasweise/texlive:1.0.0
+  image: thomasweise/texlive
   commands:
   - cd static/cv
   - cp cv-anoff.tex cv-anoff-print.tex
