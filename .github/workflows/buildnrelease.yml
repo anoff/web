@@ -42,7 +42,7 @@ jobs:
     needs: prepare-cv
     runs-on: ubuntu-20.04
     container:
-      image: thomasweise/texlive
+      image: texlive/texlive
     steps:
     - uses: actions/checkout@v2
     - name: Download modified tex
@@ -51,9 +51,13 @@ jobs:
         name: cv-tex
         path: static/cv/
     - name: run LaTeX build (web)
-      run: lualatex.sh cv-anoff.tex || echo "Ignoring original.pdf error"
+      run: |
+        cd static/cv
+        lualatex cv-anoff.tex
     - name: run LaTeX build (print)
-      run: lualatex.sh cv-anoff-print.tex || echo "Ignoring original.pdf error"
+      run: |
+        cd static/cv
+        lualatex cv-anoff-print.tex
     - name: Upload modified tex
       uses: actions/upload-artifact@v3
       with:
