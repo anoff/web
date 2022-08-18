@@ -25,7 +25,7 @@ jobs:
         git rev-list --abbrev-commit -1 HEAD cv-anoff.tex > .COMMIT_SHA
         export COMMIT_SHA=$(cat .COMMIT_SHA)
         sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff.tex
-        sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff-print.tex
+        cp cv-anoff.tex cv-anoff-print.tex
         sed -i.bak "s/\([[:alnum:]]*documentclass\[\)\([[:alnum:]]*\)\(\]{friggeri-cv}.[[:alnum:]]*\)/\1print\2\3/" cv-anoff-print.tex
         echo "LINE25 (AFTER injecting version):"
         cat cv-anoff.tex| head -n 25 | tail -n 1
@@ -39,6 +39,7 @@ jobs:
         retention-days: 7
 
   build-cv:
+    needs: prepare-cv
     runs-on: ubuntu-20.04
     container:
       image: thomasweise/texlive
@@ -64,6 +65,7 @@ jobs:
 
   generate-page:
     if: github.ref == 'refs/heads/source'
+    needs: build-cv
     runs-on: ubuntu-20.04
     container:
       image: anoff/hugo-asciidoctor
