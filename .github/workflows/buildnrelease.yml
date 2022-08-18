@@ -1,0 +1,89 @@
+name: Build & Release
+
+
+on:
+  push:
+    branches:
+      - source
+
+permissions:
+  contents: write
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  prepare-cv:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: inject git tag into CV
+      run: |
+        cd static/cv
+        echo "LINE25 (BEFORE injecting version):"
+        cat cv-anoff.tex| head -n 25 | tail -n 1
+        git rev-list --abbrev-commit -1 HEAD cv-anoff.tex > .COMMIT_SHA
+        export COMMIT_SHA=$(cat .COMMIT_SHA)
+        sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff.tex
+        sed -i.bak "s/\({git:\)[[:alnum:]]*\(}\)/\1"$COMMIT_SHA"\2/" cv-anoff-print.tex
+        sed -i.bak "s/\([[:alnum:]]*documentclass\[\)\([[:alnum:]]*\)\(\]{friggeri-cv}.[[:alnum:]]*\)/\1print\2\3/" cv-anoff-print.tex
+        echo "LINE25 (AFTER injecting version):"
+        cat cv-anoff.tex| head -n 25 | tail -n 1
+    - name: Upload modified tex
+      uses: actions/upload-artifact@v3
+      with:
+        name: cv-tex
+        path:
+          - static/cv/cv-anoff.tex
+          - static/cv/cv-anoff-print.tex
+        retention-days: 7
+
+  build-cv:
+    runs-on: ubuntu-20.04
+    container:
+      image: thomasweise/texlive
+    steps:
+    - uses: actions/checkout@v2
+    - name: Download modified tex
+      uses: actions/download-artifact@v3
+      with:
+        name: cv-tex
+        path: static/cv/
+    - name: run LaTeX build (web)
+      run: lualatex.sh cv-anoff.tex || echo "Ignoring original.pdf error"
+    - name: run LaTeX build (print)
+      run: lualatex.sh cv-anoff-print.tex || echo "Ignoring original.pdf error"
+    - name: Upload modified tex
+      uses: actions/upload-artifact@v3
+      with:
+        name: cv-pdf
+        path:
+          - static/cv/cv-anoff.pdf
+          - static/cv/cv-anoff-print.pdf
+        retention-days: 7
+
+  generate-page:
+    if: github.ref == 'refs/heads/source'
+    runs-on: ubuntu-20.04
+    container:
+      image: anoff/hugo-asciidoctor
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+    - name: Download generated CV
+      uses: actions/download-artifact@v3
+      with:
+        name: cv-pdf
+        path: static/cv/
+    - name: hotfix theme
+      run: cp -R theme_fixes/** themes/bilberry-hugo-theme
+    - name: generate HTML
+      run: hugo --gc --minify -d _site --baseURL https://anoff.io"
+    - name: disable Jekyll
+      run: touch _site/.nojekyll
+    - name: Publish page
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: _site
+        branch: master
