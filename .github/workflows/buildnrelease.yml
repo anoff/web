@@ -33,9 +33,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: cv-tex
-        path:
-          - static/cv/cv-anoff.tex
-          - static/cv/cv-anoff-print.tex
+        path: |
+          static/cv/cv-anoff.tex
+          static/cv/cv-anoff-print.tex
         retention-days: 7
 
   build-cv:
@@ -57,9 +57,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: cv-pdf
-        path:
-          - static/cv/cv-anoff.pdf
-          - static/cv/cv-anoff-print.pdf
+        path: |
+          static/cv/cv-anoff.pdf
+          static/cv/cv-anoff-print.pdf
         retention-days: 7
 
   generate-page:
