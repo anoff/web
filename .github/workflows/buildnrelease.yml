@@ -85,7 +85,7 @@ jobs:
     - name: hotfix theme
       run: cp -R theme_fixes/** themes/bilberry-hugo-theme
     - name: generate HTML
-      run: hugo --gc --minify -d _site --baseURL https://anoff.io"
+      run: hugo --gc --minify -d _site --baseURL "https://anoff.io"
     - name: disable Jekyll
       run: touch _site/.nojekyll
     - name: Publish page
