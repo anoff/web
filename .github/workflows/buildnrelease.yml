@@ -68,7 +68,6 @@ jobs:
         retention-days: 7
 
   generate-page:
-    if: github.ref == 'refs/heads/source'
     needs: build-cv
     runs-on: ubuntu-20.04
     container:
@@ -88,6 +87,20 @@ jobs:
       run: hugo --gc --minify -d _site --baseURL "https://anoff.io"
     - name: disable Jekyll
       run: touch _site/.nojekyll
+    - uses: actions/cache@v3
+      with:
+        path: _site/
+        key: ${{ env.GITHUB_SHA }}-${{ env.GITHUB_RUN_ID }}-site
+
+  deploy-page:
+    if: github.ref == 'refs/heads/source'
+    needs: generate-page
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/cache@v3
+      with:
+        path: _site/
+        key: ${{ env.GITHUB_SHA }}-${{ env.GITHUB_RUN_ID }}-site
     - name: Publish page
       uses: JamesIves/github-pages-deploy-action@v4
       with:
