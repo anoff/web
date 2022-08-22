@@ -76,6 +76,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: 'recursive'
+    - uses: actions/cache@v3
+      with:
+        path: _site/
+        key: ${{ env.GITHUB_SHA }}-${{ env.GITHUB_RUN_ID }}-site
     - name: Download generated CV
       uses: actions/download-artifact@v3
       with:
@@ -87,10 +91,8 @@ jobs:
       run: hugo --gc --minify -d _site --baseURL "https://anoff.io"
     - name: disable Jekyll
       run: touch _site/.nojekyll
-    - uses: actions/cache@v3
-      with:
-        path: _site/
-        key: ${{ env.GITHUB_SHA }}-${{ env.GITHUB_RUN_ID }}-site
+    - name: add tar APK for running actions/cache@v3
+      run: apk add --no-cache tar
 
   deploy-page:
     if: github.ref == 'refs/heads/source'
