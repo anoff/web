@@ -103,6 +103,7 @@ jobs:
     needs: generate-page
     runs-on: ubuntu-20.04
     steps:
+    - uses: actions/checkout@v2
     - name: Download HTML
       uses: actions/download-artifact@v3
       with:
