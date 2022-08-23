@@ -80,7 +80,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: cv-pdf
-        path: static/cv/
+        path: static/
     - name: hotfix theme
       run: cp -R theme_fixes/** themes/bilberry-hugo-theme
     - name: generate HTML
