@@ -76,10 +76,6 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: 'recursive'
-    - uses: actions/cache@v3
-      with:
-        path: _site
-        key: ${{ github.sha }}-site
     - name: Download generated CV
       uses: actions/download-artifact@v3
       with:
@@ -95,16 +91,23 @@ jobs:
       run: |
         apk add --no-cache tar
         ls -ahl _site/
+    - name: Upload HTML
+      uses: actions/upload-artifact@v3
+      with:
+        name: website
+        path: _site/
+        retention-days: 7
 
   deploy-page:
     if: github.ref == 'refs/heads/source'
     needs: generate-page
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/cache@v3
+    - name: Download HTML
+      uses: actions/download-artifact@v3
       with:
-        path: _site
-        key: ${{ github.sha }}-site
+        name: website
+        path: _site/
     - name: Publish page
       uses: JamesIves/github-pages-deploy-action@v4
       with:
